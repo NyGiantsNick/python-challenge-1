@@ -123,7 +123,7 @@ while place_order:
             menu_choice = input("Type the number of the item you would like to select: ")
 
             # 3. Check if the customer typed a number
-            if menu_choice.isdigit():
+            if int(menu_choice.isdigit()):
                 # Convert the menu selection to an integer
                 menu_choice = int(menu_choice)
 
@@ -136,16 +136,15 @@ while place_order:
                     quantity = input(f"How many {item_choice} would you like to order? ")
 
                     # Check if the quantity is a number, default to 1 if not
-                if quantity.isdigit():
-                    i = 1
+                    if quantity.isdigit():
+                        i = 1
                     # Add the item name, price, and quantity to the order list
-                    order_list.append({
-                        "Item name": menu_choice,
-                        "Price": menu_items[menu_choice]["Price"],
-                        "Quantity": quantity
-                    })
-
-                    print(f"{quantity} {item_choice}(s) added to your order. ")
+                        order_list.append({
+                            "Item name": menu_choice,
+                            "Price": menu_items[menu_choice]["Price"],
+                            "Quantity": quantity
+                        })
+                        print(f"{quantity} {item_choice}(s) added to your order. ")
 
                     # Tell the customer that their input isn't valid
                 else:
@@ -153,6 +152,7 @@ while place_order:
 
 
                 # Tell the customer they didn't select a menu option
+                
             else:
                 print("You didn't select a valid item number.")
 
@@ -186,7 +186,8 @@ while place_order:
             print("Thank you for choosing the Variety Food Truck. Here is what we're preparing for you.")
 
                 # Exit the keep ordering question loop
-
+        #else:
+            #print(f"")        
 
                 # Tell the customer to try again
 
