@@ -208,12 +208,13 @@ for item in order_list:
     quantity = item["Quantity"]
 
     # 8. Calculate the number of spaces for formatted printing
-    num_item_spaces = 25 - len("Item Name")
+    num_item_spaces = 34 - len("Item Name")
     item_spaces = " " * num_item_spaces
 
+
     # 9. Create space strings
-    price_spaces = " " * (8 - len(str(price)))
-    quantity_spaces = " " * (10 - len(str(quantity)))
+    price_spaces = " " * (6 - len(str(price)))
+    quantity_spaces = " " * (8 - len(str(quantity)))
 
     # 10. Print the item name, price, and quantity
     print(f"{item_choice}{item_spaces}| ${price}{price_spaces}| {quantity}{quantity_spaces}")
